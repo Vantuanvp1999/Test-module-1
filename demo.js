@@ -48,23 +48,23 @@ function editByIndex(id) {
      <button onclick="ok(${id})">OK</button>
      <button type="reset" onclick="reset()">Hủy</button>
     </fieldset>`
-    document.getElementById("bodyTable").innerHTML = text;
+    document.getElementById("bodyTable2").innerHTML = text;
 
 
 }
 function ok(index) {
-    let bookId= document.getElementById("bookId1").value;
-    let type= document.getElementById("type1").value;
-    let name= document.getElementById("name1").value;
-    let userId= document.getElementById("userId").value;
-    let date= document.getElementById("date").value;
-    let money= document.getElementById("money").value;
-    let newProduct = new MoneyBook(bookId,type,name,userId,date,money);
+    let bookId1= document.getElementById("bookId1").value;
+    let type1= document.getElementById("type1").value;
+    let name1= document.getElementById("name1").value;
+    let userId1= document.getElementById("userId1").value;
+    let date1= document.getElementById("date1").value;
+    let money1= document.getElementById("money1").value;
+    let newProduct = new MoneyBook(bookId1,type1,name1,userId1,date1,money1);
     moneyBooks[index]=newProduct;
     showALlProducts();
     reset()
 }
 function reset() {
-    document.getElementById("bodyTable").innerHTML = "";
-showALlProducts();
+    document.getElementById("bodyTable2").innerHTML = "";
+
 }
