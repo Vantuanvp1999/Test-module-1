@@ -17,8 +17,9 @@ function showALlProducts(){
                 }
                 showALlProducts();
 function deleteByIndex(id) {
+    if (confirm("xác nhận xóa")) {
     moneyBooks.splice(id, 1);
-  showALlProducts();
+  showALlProducts();}
 }
 function addNewProduct() {
     let bookId= document.getElementById("bookId").value;
