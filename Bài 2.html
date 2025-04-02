@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //hàm tìm ước số chung
+  function gcd(a, b) {
+    return b === 0 ? a : gcd(b, a % b);
+  }
+    //hàm rút gọn phân số
+    function simplifyFraction(numerator, denominator) {
+      let commonFactor = gcd(numerator, denominator);
+      return [numerator / commonFactor, denominator / commonFactor];
+    }
+      // Hàm kiểm tra 2 phân số có bằng nhau không
+      function areFractionsEqual(num1, den1, num2, den2) {
+        // Rút gọn cả hai phân số
+        let [simpNum1, simpDen1] = simplifyFraction(num1, den1);
+        let [simpNum2, simpDen2] = simplifyFraction(num2, den2);
+
+        // So sánh sau khi rút gọn
+        return simpNum1 === simpNum2 && simpDen1 === simpDen2;
+      }
+      // Nhập hai phân số từ người dùng
+      let num1 = parseInt(prompt("Nhập tử số của phân số thứ nhất:"));
+      let den1 = parseInt(prompt("Nhập mẫu số của phân số thứ nhất:"));
+      let num2 = parseInt(prompt("Nhập tử số của phân số thứ hai:"));
+      let den2 = parseInt(prompt("Nhập mẫu số của phân số thứ hai:"));
+// Kiểm tra mẫu số có bằng 0 không
+      if (den1 === 0 || den2 === 0) {
+        console.log("Lỗi: Mẫu số không được bằng 0.");
+      } else {
+        let result = areFractionsEqual(num1, den1, num2, den2);
+        if (result) {
+          console.log("Hai phân số bằng nhau.");
+        } else {
+          console.log("Hai phân số không bằng nhau.");
+        }
+      }
+</script>
+</body>
+</html>

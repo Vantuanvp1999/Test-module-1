@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="bookId" placeholder="Mã sổ" maxlength="5">
+<input type="text" id="type" placeholder="Loại tiết kiệm" maxlength="10">
+<input type="text" id="name" placeholder="Họ và tên" maxlength="30"><br>
+<input type="number" id="userId" placeholder="Chứng minh nhân dân">
+<input type="date" id="date" placeholder="Ngày mở sổ " >
+<input type="number" id="money" placeholder="Số tiền gửi">
+<button onclick="addNewProduct()">thêm</button>
+<table id="productTable" border="1px">
+  <tr>
+    <th>Mã sổ</th>
+    <th>Loại tiết kiệm</th>
+    <th>Họ và tên</th>
+    <th>Chứng minh nhân dân</th>
+    <th>Ngày mở sổ</th>
+    <th>Số tiền gửi</th>
+    <th>Sửa</th>
+    <th>Xóa</th>
+  </tr>
+
+</table>
+<table>
+<tbody id="bodyTable"></tbody>
+  </table>
+<script src="index.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
